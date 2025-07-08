@@ -9,7 +9,7 @@ const weatherTitle = document.querySelector(".weather-title");
 
 const fetchWeatherData =  async () => {
     const value = input.value;
-    const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=883329d53219483894a124530250807&q=${value}&aqi=yes`);
+    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=883329d53219483894a124530250807&q=${value}&aqi=yes`);
     const result =  await response.json();
     cityName.innerText = `${result.location.name}, ${result.location.region} - ${result.location.country}`;
     cityTime.innerText = result.location.localtime;
