@@ -15,11 +15,6 @@ const fetchWeatherData =  async () => {
     cityTime.innerText = result.location.localtime;
     cityTemp.innerText = `${result.current.temp_c}°C / ${result.current.temp_f}°F`;
     weatherIcon.src = "https:" + result.current.condition.icon;
-    console.log(result.current.condition.text);
-    console.log(result.current.condition.text);
-    console.log(result.current.condition.text);
-    console.log(result.current.condition.text);
-    console.log(result.current.condition.text);
     weatherTitle.innerHTML = capitalize(result.current.condition.text);
 }
 
