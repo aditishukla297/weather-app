@@ -11,12 +11,10 @@ const fetchWeatherData =  async () => {
     const value = input.value;
     const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=883329d53219483894a124530250807&q=${value}&aqi=yes`);
     const result =  await response.json();
-    console.log(result)
     cityName.innerText = `${result.location.name}, ${result.location.region} - ${result.location.country}`;
     cityTime.innerText = result.location.localtime;
     cityTemp.innerText = `${result.current.temp_c}°C / ${result.current.temp_f}°F`;
     weatherIcon.src = "https:" + result.current.condition.icon;
-    console.log(result.current.condition.text);
     weatherTitle.innerHTML = capitalize(result.current.condition.text);
 }
 
