@@ -148,3 +148,27 @@ button#search-button:hover {
   color: #ff8800;
   margin-top: 10px;
 }
+
+
+@media (max-width: 600px) {
+  .logo img {
+  height: 40px;
+  position: absolute;
+  left: 25px;
+  top: 10px;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+
+}
+
+.nav-title {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 3%;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: gold 2px 2px 4px;
+  text-decoration:underline;
+  animation: fadeInSlide 5s ease-in-out infinite alternate;
+}
+
+}
